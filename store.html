@@ -7,14 +7,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://gumroad.com/js/gumroad.js"></script>
   <style>
-    /* ========== GLOBAL RESET & BASE (same as index.html) ========== */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       -webkit-tap-highlight-color: transparent;
     }
-
     body {
       background: #FCFAF5;
       color: #2C2A29;
@@ -24,12 +22,10 @@
       user-select: none;
       -webkit-user-select: none;
     }
-
     input, textarea, button {
       user-select: text;
       -webkit-user-select: text;
     }
-
     .sri-yantra-bg {
       position: fixed;
       top: 0;
@@ -211,11 +207,16 @@
       border: 1px solid #E8E0D3;
       transition: all 0.3s cubic-bezier(0.2,0,0,1);
       overflow: hidden;
+      cursor: pointer;
     }
     .book-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 25px 35px -12px rgba(0,0,0,0.1);
       border-color: #C6A15B;
+    }
+    .book-card:active {
+      transform: translateY(-2px);
+      transition-duration: 0.1s;
     }
     .book-cover {
       height: 240px;
@@ -477,12 +478,14 @@
   <div class="books-grid" id="booksGrid"></div>
 </div>
 <footer>
-  <div class="footer-grid" id="footerGrid"></div>
-  <div class="footer-bottom" id="footerBottom"></div>
+  <div class="footer-container" style="max-width:1280px; margin:0 auto; padding:0 32px;">
+    <div class="footer-grid" id="footerGrid"></div>
+    <div class="footer-bottom" id="footerBottom"></div>
+  </div>
 </footer>
 <script>
   async function loadData() {
-    const res = await fetch('data.json');
+    const res = await fetch('/data.json');
     return await res.json();
   }
   let allBooks = [];
