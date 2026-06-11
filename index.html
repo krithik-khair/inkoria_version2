@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://gumroad.com/js/gumroad.js"></script>
   <style>
-    /* ---------- GLOBAL RESET & BASE ---------- */
+    /* ========== GLOBAL RESET & BASE ========== */
     * {
       margin: 0;
       padding: 0;
@@ -25,7 +25,6 @@
       -webkit-user-select: none;
     }
 
-    /* Keep form fields selectable */
     input, textarea, button {
       user-select: text;
       -webkit-user-select: text;
@@ -362,7 +361,7 @@
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     }
 
-    /* Book Cards */
+    /* Book Cards – with smooth hover and click animation */
     .book-card {
       background: white;
       border-radius: 24px;
@@ -371,11 +370,16 @@
       border: 1px solid #E8E0D3;
       transition: all 0.3s cubic-bezier(0.2,0,0,1);
       overflow: hidden;
+      cursor: pointer;
     }
     .book-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 25px 35px -12px rgba(0,0,0,0.1);
       border-color: #C6A15B;
+    }
+    .book-card:active {
+      transform: translateY(-2px);
+      transition-duration: 0.1s;
     }
     .book-cover {
       height: 240px;
@@ -497,7 +501,7 @@
       transform: translateY(-1px);
     }
 
-    /* Upcoming Cards */
+    /* Upcoming Cards – same hover and click animation */
     .upcoming-card {
       background: white;
       border-radius: 20px;
@@ -505,10 +509,15 @@
       text-align: center;
       border: 1px solid #E8E0D3;
       transition: all 0.25s;
+      cursor: pointer;
     }
     .upcoming-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-6px);
       border-color: #C6A15B;
+    }
+    .upcoming-card:active {
+      transform: translateY(-2px);
+      transition-duration: 0.1s;
     }
     .upcoming-title {
       font-size: 20px;
@@ -651,6 +660,7 @@
       border-top: 1px solid #E8E0D3;
       padding: 56px 0 32px;
       margin-top: 40px;
+      background: transparent;
     }
     .footer-grid {
       display: grid;
@@ -885,14 +895,13 @@
 
 <div class="content">
   <nav>
-    <a href="#" class="logo">INKORIA<span>.</span></a>
+    <a href="/" class="logo">INKORIA<span>.</span></a>
     <ul class="nav-links">
-      <li><a class="nav-link" data-target="books">Library</a></li>
-      <li><a class="nav-link" data-target="upcoming">Forthcoming</a></li>
-      <li><a class="nav-link" data-target="philosophy">Wisdom</a></li>
-      <li><a class="nav-link" data-target="newsletter">Letters</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/store">Store</a></li>
+      <li><a href="/upcoming">Forthcoming</a></li>
     </ul>
-    <a class="nav-link-btn nav-btn" data-target="newsletter">Subscribe</a>
+    <a href="/#newsletter" class="nav-btn">Subscribe</a>
   </nav>
 
   <div class="hero">
@@ -943,7 +952,7 @@
 </div>
 
 <footer>
-  <div class="container" style="max-width:1280px; margin:0 auto; padding:0 28px;">
+  <div class="footer-container" style="max-width:1280px; margin:0 auto; padding:0 32px;">
     <div class="footer-grid" id="footerGrid"></div>
     <div class="footer-bottom" id="footerBottom"></div>
   </div>
@@ -1042,7 +1051,7 @@
   }
 
   async function loadData() {
-    const res = await fetch('data.json');
+    const res = await fetch('/data.json');
     return await res.json();
   }
 
@@ -1074,6 +1083,7 @@
       </div>
     `).join('');
     grid.innerHTML = booksHtml;
+    if (window.Gumroad) window.Gumroad.init();
   }
 
   async function init() {
