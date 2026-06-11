@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "badge": "KHAIR PUBLICATIONS",
+    "heading": "The Living Library of<br><em>Himalayan Philosophy</em>",
+    "subheading": "Ancient wisdom of Kashmir Shaivism, Taoism, Zen, and Advaita — published from Kashmir, read across the world.",
+    "buttons": {
+      "explore": "Explore books",
+      "coming": "Coming soon"
+    }
+  },
+  "stats": [
+    { "number": "9+", "label": "Countries Reached" },
+    { "number": "4+", "label": "Titles Published" },
+    { "number": "100+", "label": "Orders Worldwide" },
+    { "number": "2025", "label": "Founded" }
+  ],
+  "booksSection": {
+    "eyebrow": "AVAILABLE NOW",
+    "title": "The Kashmir <em>Shaivism</em> Library",
+    "subtitle": "Digital editions · PDF & EPUB"
+  },
+  "books": [
+    {
+      "coverPlaceholder": "INKORIA",
+      "series": "TRIKA SERIES · VOL I",
+      "title": "Kashmiri Shavism",
+      "author": "Krithik Khair",
+      "desc": "A modern introduction to the philosophy of recognition.",
+      "formats": "PDF • EPUB",
+      "price": "$3.99",
+      "sampleLink": "#",
+      "gumroadLink": "https://inkoriabooks.gumroad.com/l/kashmiri_shavism",
+      "coverImage": "images/kashmiri-shaivism.png"
+    },
+    {
+      "series": "TRIKA SERIES · VOL II",
+      "title": "The Concept of Spanda",
+      "author": "Krithik Khair",
+      "desc": "The hidden pulse of consciousness — a direct guide to non-dual recognition.",
+      "formats": "PDF • EPUB",
+      "price": "$3.99",
+      "sampleLink": "#",
+      "gumroadLink": "https://gumroad.com/l/spanda",
+      "coverImage": "images/spanda.png"
+    },
+    {
+      "series": "TRIKA SERIES · VOL III",
+      "title": "Wisdom of Śrī Abhinavagupta",
+      "author": "Krithik Khair",
+      "desc": "The greatest synthesizer of Trika Shaivism. His vision of nondual consciousness and way of living life.",
+      "formats": "PDF • EPUB",
+      "price": "$3.99",
+      "sampleLink": "#",
+      "gumroadLink": "https://gumroad.com/l/abhinavagupta",
+      "coverImage": "images/abhinavagupta.png"
+    },
+    {
+      "series": "SOURCE TEXTS · VOL I",
+      "title": "Vijñāna Bhairava Tantra",
+      "author": "Translated & annotated",
+      "desc": "112 dhāraṇās for direct recognition of consciousness. The complete contemplative manual.",
+      "formats": "PDF • EPUB",
+      "price": "$4.99",
+      "sampleLink": "#",
+      "gumroadLink": "https://gumroad.com/l/vijnana-bhairava",
+      "coverImage": "images/vijnana-bhairava.png"
+    }
+  ],
+  "upcomingSection": {
+    "eyebrow": "FORTHCOMING TITLES",
+    "title": "Shape the <em>Library</em>",
+    "subtitle": "Join waiting lists to be notified when each title releases."
+  },
+  "upcoming": [
+    "Shiva Sutras",
+    "Wisdom of Utpaladeva",
+    "Lal Ded & Vakhs",
+    "Pratyabhijñāhṛdayam",
+    "Disturbance (Quantum + Shaivism)",
+    "Advaita Vedanta & Metaphysics"
+  ],
+  "philosophy": {
+    "title": "More than a bookstore — a living tradition",
+    "paragraphs": [
+      "Inkoria is an independent publisher rooted in J&K. We translate, curate, and present the wisdom of Kashmiri Shaivism, Taoism, Zen, and Advaita for the modern seeker — without dilution, without dogma.",
+      "All our books are available as digital editions (PDF/EPUB) accessible worldwide. When you buy directly from us, you support a Kashmiri Pandit publisher and help preserve a philosophy that survived centuries of turmoil."
+    ],
+    "stats": [
+      { "number": "4+", "label": "Titles published" },
+      { "number": "9+", "label": "Countries reached" },
+      { "number": "∞", "label": "Tradition preserved" }
+    ]
+  },
+  "newsletter": {
+    "title": "The Inkoria Letters",
+    "subtitle": "Monthly reflections on Kashmir Shaivism, new releases and early access.",
+    "buttonText": "Join Inkoria Letters →",
+    "modalMessage": "Monthly reflections on Kashmir Shaivism, new releases and early access."
+  },
+  "footer": {
+    "tagline": "Khair Publications · MSME registered, India",
+    "msme": "MSME Registered · J&K, INDIA",
+    "copyright": "© 2026 Krithik Khair · Khair Publications · All rights reserved"
+  }
+}

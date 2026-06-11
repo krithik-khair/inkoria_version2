@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>INKORIA — All Titles</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://gumroad.com/js/gumroad.js"></script>
+  <style>
+    /* ========== GLOBAL RESET & BASE (same as index.html) ========== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background: #FCFAF5;
+      color: #2C2A29;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.5;
+      overflow-x: hidden;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    input, textarea, button {
+      user-select: text;
+      -webkit-user-select: text;
+    }
+
+    .sri-yantra-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      opacity: 0.1;
+    }
+    .sri-yantra-svg {
+      width: 90vw;
+      max-width: 1000px;
+      height: auto;
+      animation: rotateYantra 120s linear infinite, breatheYantra 8s ease-in-out infinite;
+    }
+    @keyframes rotateYantra {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes breatheYantra {
+      0%,100% { transform: scale(1); opacity: 0.1; }
+      50% { transform: scale(1.02); opacity: 0.12; }
+    }
+    @media (max-width:768px){
+      .sri-yantra-bg { opacity: 0.05; }
+      .sri-yantra-svg { animation: none; transform: rotate(0deg); }
+    }
+    .content {
+      position: relative;
+      z-index: 10;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 20px 32px 80px;
+      background: rgba(252,250,245,0.85);
+      backdrop-filter: blur(2px);
+    }
+    h1, h2, h3, .serif {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 0;
+      flex-wrap: wrap;
+      gap: 20px;
+      border-bottom: 1px solid #E8E0D3;
+      margin-bottom: 40px;
+    }
+    .logo {
+      font-size: 32px;
+      font-weight: 600;
+      font-family: 'Cormorant Garamond', serif;
+      color: #2C2A29;
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    .logo span { color: #C6A15B; }
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      color: #6B5E4A;
+      transition: color 0.2s;
+      cursor: pointer;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: #C6A15B;
+      transition: width 0.25s ease;
+    }
+    .nav-links a:hover::after,
+    .nav-links a.active::after { width: 100%; }
+    .nav-links a:hover { color: #C6A15B; }
+    .nav-btn {
+      background: #2C2A29;
+      color: #FCFAF5;
+      padding: 8px 24px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.2s;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .nav-btn:hover {
+      background: #C6A15B;
+      transform: translateY(-1px);
+    }
+    .section-header {
+      text-align: center;
+      margin: 60px 0 40px;
+    }
+    .section-eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #C6A15B;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: 40px;
+      font-family: 'Cormorant Garamond', serif;
+      margin-top: 8px;
+    }
+    .section-title em { color: #C6A15B; font-style: italic; }
+    .search-container {
+      max-width: 400px;
+      margin: 24px auto 40px;
+      position: relative;
+    }
+    .search-input {
+      width: 100%;
+      padding: 12px 20px 12px 48px;
+      border-radius: 60px;
+      border: 1px solid #E8E0D3;
+      background: #FCFAF5;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      transition: all 0.2s;
+      color: #2C2A29;
+    }
+    .search-input:focus {
+      outline: none;
+      border-color: #C6A15B;
+      box-shadow: 0 0 0 2px rgba(198,161,91,0.2);
+    }
+    .search-icon {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #9B8E78;
+      font-size: 16px;
+      pointer-events: none;
+    }
+    .clear-search {
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #9B8E78;
+      cursor: pointer;
+      font-size: 14px;
+      display: none;
+    }
+    .clear-search:hover { color: #C6A15B; }
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+    .book-card {
+      background: white;
+      border-radius: 24px;
+      padding: 0;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid #E8E0D3;
+      transition: all 0.3s cubic-bezier(0.2,0,0,1);
+      overflow: hidden;
+    }
+    .book-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 35px -12px rgba(0,0,0,0.1);
+      border-color: #C6A15B;
+    }
+    .book-cover {
+      height: 240px;
+      background: linear-gradient(145deg, #F5F0E8, #EBE3D8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #E8E0D3;
+      overflow: hidden;
+    }
+    .book-cover-inner {
+      width: 80%;
+      height: 80%;
+      background: #2C2A29;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      color: #C6A15B;
+      text-transform: uppercase;
+    }
+    .book-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px 12px 0 0;
+    }
+    .book-info { padding: 28px 28px 24px; }
+    .book-series {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #C6A15B;
+      margin-bottom: 12px;
+    }
+    .book-title {
+      font-size: 22px;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .book-author {
+      font-size: 12px;
+      color: #9B8E78;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .book-desc {
+      font-size: 14px;
+      color: #6B5E4A;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .book-formats {
+      font-size: 12px;
+      color: #C6A15B;
+      margin-bottom: 12px;
+    }
+    .book-price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-top: 1px solid #E8E0D3;
+      padding-top: 20px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .price {
+      font-size: 22px;
+      font-weight: 600;
+      color: #C6A15B;
+    }
+    .download-note {
+      font-size: 11px;
+      color: #9B8E78;
+      text-align: right;
+    }
+    .book-actions {
+      display: flex;
+      gap: 16px;
+    }
+    .btn-sample, .btn-buy {
+      flex: 1;
+      text-align: center;
+      padding: 10px 0;
+      border-radius: 40px;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-sample {
+      background: transparent;
+      border: 1px solid #E8E0D3;
+      color: #6B5E4A;
+    }
+    .btn-sample:hover {
+      border-color: #C6A15B;
+      color: #C6A15B;
+      background: rgba(198,161,91,0.05);
+    }
+    .btn-buy {
+      background: #2C2A29;
+      color: #FCFAF5;
+      border: none;
+    }
+    .btn-buy:hover {
+      background: #C6A15B;
+      transform: translateY(-1px);
+    }
+    .no-results {
+      text-align: center;
+      padding: 60px 20px;
+      color: #9B8E78;
+      font-style: italic;
+      grid-column: 1 / -1;
+    }
+    footer {
+      border-top: 1px solid #E8E0D3;
+      padding: 56px 0 32px;
+      margin-top: 40px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #2C2A29;
+    }
+    .footer-brand-line {
+      margin-top: 16px;
+      font-size: 11px;
+      color: #9B8E78;
+      letter-spacing: 0.04em;
+      font-weight: 400;
+    }
+    .footer-col h4 {
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+      color: #9B8E78;
+    }
+    .footer-col a {
+      display: block;
+      color: #6B5E4A;
+      text-decoration: none;
+      font-size: 13px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .footer-col a:hover {
+      color: #C6A15B;
+    }
+    .footer-bottom {
+      text-align: center;
+      font-size: 11px;
+      color: #9B8E78;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #E8E0D3;
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .msme {
+      margin-top: 12px;
+      font-size: 11px;
+      color: #9B8E78;
+    }
+    @media (max-width:768px){
+      .content { padding: 16px; }
+      nav { flex-direction: column; align-items: center; }
+      .nav-links { gap: 24px; flex-wrap: wrap; justify-content: center; }
+      .books-grid { gap: 24px; }
+      .book-cover { height: 200px; }
+      .book-info { padding: 20px; }
+      .book-title { font-size: 20px; }
+      .price { font-size: 18px; }
+      .book-actions { flex-direction: column; gap: 10px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+<div class="sri-yantra-bg">
+  <svg class="sri-yantra-svg" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+    <defs><radialGradient id="binduGlow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#D4AF37" stop-opacity="0.6"/><stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/></radialGradient></defs>
+    <rect x="80" y="80" width="640" height="640" fill="none" stroke="#C6A15B" stroke-width="1.5" opacity="0.6"/>
+    <rect x="100" y="100" width="600" height="600" fill="none" stroke="#C6A15B" stroke-width="1" opacity="0.4"/>
+    <path d="M80 80 L120 80 L120 60 L160 60 L160 80 L200 80" fill="none" stroke="#C6A15B" stroke-width="1" opacity="0.5"/>
+    <path d="M720 80 L680 80 L680 60 L640 60 L640 80 L600 80" fill="none" stroke="#C6A15B" stroke-width="1" opacity="0.5"/>
+    <path d="M80 720 L120 720 L120 740 L160 740 L160 720 L200 720" fill="none" stroke="#C6A15B" stroke-width="1" opacity="0.5"/>
+    <path d="M720 720 L680 720 L680 740 L640 740 L640 720 L600 720" fill="none" stroke="#C6A15B" stroke-width="1" opacity="0.5"/>
+    <g fill="none" stroke="#C6A15B" stroke-width="1.2" opacity="0.5">
+      <ellipse cx="400" cy="220" rx="30" ry="70" transform="rotate(0,400,400)"/>
+      <ellipse cx="400" cy="220" rx="30" ry="70" transform="rotate(45,400,400)"/>
+      <ellipse cx="400" cy="220" rx="30" ry="70" transform="rotate(90,400,400)"/>
+      <ellipse cx="400" cy="220" rx="30" ry="70" transform="rotate(135,400,400)"/>
+      <ellipse cx="400" cy="220" rx="30" ry="70" transform="rotate(180,400,400)"/>
+      <ellipse cx="400" cy="220" rx="30" ry="70" transform="rotate(225,400,400)"/>
+      <ellipse cx="400" cy="220" rx="30" ry="70" transform="rotate(270,400,400)"/>
+      <ellipse cx="400" cy="220" rx="30" ry="70" transform="rotate(315,400,400)"/>
+    </g>
+    <circle cx="400" cy="400" r="140" fill="none" stroke="#C6A15B" stroke-width="1" opacity="0.4" stroke-dasharray="4 6"/>
+    <polygon points="400,120 260,480 540,480" fill="none" stroke="#D4AF37" stroke-width="1.8" opacity="0.7"/>
+    <polygon points="400,160 210,490 590,490" fill="none" stroke="#D4AF37" stroke-width="1.5" opacity="0.6"/>
+    <polygon points="400,200 160,500 640,500" fill="none" stroke="#D4AF37" stroke-width="1.3" opacity="0.5"/>
+    <polygon points="400,240 120,510 680,510" fill="none" stroke="#D4AF37" stroke-width="1.1" opacity="0.5"/>
+    <polygon points="400,680 280,320 520,320" fill="none" stroke="#D4AF37" stroke-width="1.8" opacity="0.7"/>
+    <polygon points="400,640 230,310 570,310" fill="none" stroke="#D4AF37" stroke-width="1.5" opacity="0.6"/>
+    <polygon points="400,600 180,300 620,300" fill="none" stroke="#D4AF37" stroke-width="1.3" opacity="0.5"/>
+    <polygon points="400,560 140,290 660,290" fill="none" stroke="#D4AF37" stroke-width="1.1" opacity="0.5"/>
+    <polygon points="400,520 110,280 690,280" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.4"/>
+    <circle cx="400" cy="400" r="6" fill="#D4AF37" opacity="0.9"/>
+    <circle cx="400" cy="400" r="18" fill="url(#binduGlow)" opacity="0.6"/>
+    <circle cx="400" cy="400" r="32" fill="none" stroke="#D4AF37" stroke-width="0.8" opacity="0.4"/>
+  </svg>
+</div>
+<div class="content">
+  <nav>
+    <a href="/" class="logo">INKORIA<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/store" class="active">Store</a></li>
+      <li><a href="/upcoming">Forthcoming</a></li>
+    </ul>
+    <a href="/#newsletter" class="nav-btn">Subscribe</a>
+  </nav>
+  <div class="section-header">
+    <div class="section-eyebrow">COMPLETE COLLECTION</div>
+    <div class="section-title">All <em>Titles</em></div>
+  </div>
+  <div class="search-container">
+    <span class="search-icon">✦</span>
+    <input type="text" id="searchInput" class="search-input" placeholder="Search by title, author, or keyword...">
+    <button id="clearSearch" class="clear-search">✕</button>
+  </div>
+  <div class="books-grid" id="booksGrid"></div>
+</div>
+<footer>
+  <div class="footer-grid" id="footerGrid"></div>
+  <div class="footer-bottom" id="footerBottom"></div>
+</footer>
+<script>
+  async function loadData() {
+    const res = await fetch('data.json');
+    return await res.json();
+  }
+  let allBooks = [];
+  function renderBooks(filter = '') {
+    const grid = document.getElementById('booksGrid');
+    const filtered = allBooks.filter(book =>
+      book.title.toLowerCase().includes(filter) ||
+      book.author.toLowerCase().includes(filter) ||
+      book.series.toLowerCase().includes(filter) ||
+      book.desc.toLowerCase().includes(filter)
+    );
+    if (filtered.length === 0) {
+      grid.innerHTML = `<div class="no-results">No books match your search. Try a different keyword.</div>`;
+      return;
+    }
+    grid.innerHTML = filtered.map(b => `
+      <div class="book-card">
+        <div class="book-cover">
+          ${b.coverImage ? `<img src="${b.coverImage}" alt="${b.title}">` : `<div class="book-cover-inner">INKORIA</div>`}
+        </div>
+        <div class="book-info">
+          <div class="book-series">${b.series}</div>
+          <div class="book-title">${b.title}</div>
+          <div class="book-author">${b.author}</div>
+          <div class="book-desc">${b.desc}</div>
+          <div class="book-formats">${b.formats}</div>
+          <div class="book-price-row">
+            <span class="price">${b.price}</span>
+            <span class="download-note">Instant Download • Secure Checkout</span>
+          </div>
+          <div class="book-actions">
+            <a href="${b.sampleLink}" class="btn-sample" target="_blank">Read Sample</a>
+            <a href="${b.gumroadLink}" class="btn-buy" data-gumroad-overlay="true">Buy Now →</a>
+          </div>
+        </div>
+      </div>
+    `).join('');
+    if (window.Gumroad) window.Gumroad.init();
+  }
+  async function init() {
+    const data = await loadData();
+    allBooks = data.books;
+    renderBooks('');
+    const searchInput = document.getElementById('searchInput');
+    const clearBtn = document.getElementById('clearSearch');
+    let debounce;
+    function updateSearch() {
+      clearTimeout(debounce);
+      debounce = setTimeout(() => {
+        const term = searchInput.value.toLowerCase().trim();
+        renderBooks(term);
+        clearBtn.style.display = term ? 'block' : 'none';
+      }, 200);
+    }
+    searchInput.addEventListener('input', updateSearch);
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      updateSearch();
+      searchInput.focus();
+    });
+    document.getElementById('footerGrid').innerHTML = `
+      <div>
+        <div class="footer-logo">INKORIA</div>
+        <p style="font-size:13px; color:#6B5E4A; margin-top:8px;">Khair Publications · MSME registered, India</p>
+        <div class="footer-brand-line">A part of KHAIR PUBLICATIONS</div>
+        <div class="msme">MSME Registered · J&K, INDIA</div>
+      </div>
+      <div class="footer-col">
+        <h4>Library</h4>
+        <a href="/#books">Kashmiri Shavism</a>
+        <a href="/#books">Concept of Spanda</a>
+        <a href="/#books">Abhinavagupta</a>
+        <a href="/#books">Vijñāna Bhairava</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="/#newsletter">Subscribe</a>
+        <a href="/upcoming">Waiting Lists</a>
+        <a href="/#philosophy">About Inkoria</a>
+        <a href="/contact">Customer Support</a>
+      </div>
+    `;
+    document.getElementById('footerBottom').innerHTML = `<p>© 2026 Krithik Khair · Khair Publications · All rights reserved</p>`;
+  }
+  init();
+  document.addEventListener('contextmenu', (e) => {
+    const tag = e.target.tagName.toLowerCase();
+    if (tag !== 'input' && tag !== 'textarea' && tag !== 'button') e.preventDefault();
+  });
+  document.querySelectorAll('img').forEach(img => {
+    img.setAttribute('draggable', 'false');
+    img.addEventListener('dragstart', e => e.preventDefault());
+  });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal, .book-card').forEach(el => {
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
