@@ -6,14 +6,12 @@
   <title>INKORIA — Forthcoming Titles</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    /* ========== GLOBAL RESET & BASE ========== */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       -webkit-tap-highlight-color: transparent;
     }
-
     body {
       background: #FCFAF5;
       color: #2C2A29;
@@ -23,13 +21,10 @@
       user-select: none;
       -webkit-user-select: none;
     }
-
     input, textarea, button {
       user-select: text;
       -webkit-user-select: text;
     }
-
-    /* Error styles for modal */
     .error-message {
       font-size: 11px;
       color: #C45A3B;
@@ -51,7 +46,6 @@
       border-color: #C45A3B !important;
       background-color: #FFF8F6 !important;
     }
-
     .sri-yantra-bg {
       position: fixed;
       top: 0;
@@ -189,10 +183,15 @@
       text-align: center;
       border: 1px solid #E8E0D3;
       transition: all 0.25s;
+      cursor: pointer;
     }
     .upcoming-card:hover {
       transform: translateY(-6px);
       border-color: #C6A15B;
+    }
+    .upcoming-card:active {
+      transform: translateY(-2px);
+      transition-duration: 0.1s;
     }
     .upcoming-title {
       font-size: 24px;
@@ -436,8 +435,10 @@
   <div class="upcoming-grid" id="upcomingGrid"></div>
 </div>
 <footer>
-  <div class="footer-grid" id="footerGrid"></div>
-  <div class="footer-bottom" id="footerBottom"></div>
+  <div class="footer-container" style="max-width:1280px; margin:0 auto; padding:0 32px;">
+    <div class="footer-grid" id="footerGrid"></div>
+    <div class="footer-bottom" id="footerBottom"></div>
+  </div>
 </footer>
 <div id="customModal" class="custom-modal-overlay">
   <div class="custom-modal">
@@ -478,7 +479,6 @@
     buttonsContainer.innerHTML = options.buttons.map(btn => `<button class="modal-btn ${btn.primary ? '' : 'modal-btn-secondary'}" data-action="${btn.action}">${btn.label}</button>`).join('');
     overlay.classList.add('active');
 
-    // If there are fields, inject them after message
     if (options.fields) {
       const fieldsHtml = options.fields.map(f => `<div class="modal-input-group"><input type="${f.type}" id="${f.id}" placeholder="${f.placeholder}" required></div>`).join('');
       messageEl.insertAdjacentHTML('afterend', fieldsHtml);
@@ -533,7 +533,7 @@
   }
 
   async function loadData() {
-    const res = await fetch('data.json');
+    const res = await fetch('/data.json');
     return await res.json();
   }
 
