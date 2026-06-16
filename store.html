@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>The Kashmir Shaivism Library</title>
+  <title>INKORIA — All Titles</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://gumroad.com/js/gumroad.js"></script>
+  <!-- GUMROAD SCRIPT REMOVED -->
   <style>
+    /* ========== GLOBAL RESET & BASE ========== */
     * {
       margin: 0;
       padding: 0;
@@ -22,7 +23,10 @@
       user-select: none;
       -webkit-user-select: none;
     }
-    input, textarea, button { user-select: text; -webkit-user-select: text; }
+    input, textarea, button {
+      user-select: text;
+      -webkit-user-select: text;
+    }
     .sri-yantra-bg {
       position: fixed;
       top: 0;
@@ -42,9 +46,18 @@
       height: auto;
       animation: rotateYantra 120s linear infinite, breatheYantra 8s ease-in-out infinite;
     }
-    @keyframes rotateYantra { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-    @keyframes breatheYantra { 0%,100% { transform: scale(1); opacity: 0.1; } 50% { transform: scale(1.02); opacity: 0.12; } }
-    @media (max-width:768px){ .sri-yantra-bg { opacity: 0.05; } .sri-yantra-svg { animation: none; transform: rotate(0deg); } }
+    @keyframes rotateYantra {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes breatheYantra {
+      0%,100% { transform: scale(1); opacity: 0.1; }
+      50% { transform: scale(1.02); opacity: 0.12; }
+    }
+    @media (max-width:768px){
+      .sri-yantra-bg { opacity: 0.05; }
+      .sri-yantra-svg { animation: none; transform: rotate(0deg); }
+    }
     .content {
       position: relative;
       z-index: 10;
@@ -54,7 +67,11 @@
       background: rgba(252,250,245,0.85);
       backdrop-filter: blur(2px);
     }
-    h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; font-weight: 500; letter-spacing: -0.01em; }
+    h1, h2, h3, .serif {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
     nav {
       display: flex;
       justify-content: space-between;
@@ -65,18 +82,74 @@
       border-bottom: 1px solid #E8E0D3;
       margin-bottom: 40px;
     }
-    .logo { font-size: 32px; font-weight: 600; font-family: 'Cormorant Garamond', serif; color: #2C2A29; text-decoration: none; letter-spacing: -0.5px; }
+    .logo {
+      font-size: 32px;
+      font-weight: 600;
+      font-family: 'Cormorant Garamond', serif;
+      color: #2C2A29;
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
     .logo span { color: #C6A15B; }
-    .nav-links { display: flex; gap: 36px; list-style: none; }
-    .nav-links a { text-decoration: none; font-size: 14px; font-weight: 500; color: #6B5E4A; transition: color 0.2s; cursor: pointer; position: relative; }
-    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1.5px; background: #C6A15B; transition: width 0.25s ease; }
-    .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      color: #6B5E4A;
+      transition: color 0.2s;
+      cursor: pointer;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: #C6A15B;
+      transition: width 0.25s ease;
+    }
+    .nav-links a:hover::after,
+    .nav-links a.active::after { width: 100%; }
     .nav-links a:hover { color: #C6A15B; }
-    .nav-btn { background: #2C2A29; color: #FCFAF5; padding: 8px 24px; border-radius: 40px; text-decoration: none; font-size: 13px; font-weight: 500; transition: all 0.2s; cursor: pointer; display: inline-block; }
-    .nav-btn:hover { background: #C6A15B; transform: translateY(-1px); }
-    .section-header { text-align: center; margin: 60px 0 40px; }
-    .section-eyebrow { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #C6A15B; margin-bottom: 12px; }
-    .section-title { font-size: 40px; font-family: 'Cormorant Garamond', serif; margin-top: 8px; }
+    .nav-btn {
+      background: #2C2A29;
+      color: #FCFAF5;
+      padding: 8px 24px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.2s;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .nav-btn:hover {
+      background: #C6A15B;
+      transform: translateY(-1px);
+    }
+    .section-header {
+      text-align: center;
+      margin: 60px 0 40px;
+    }
+    .section-eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #C6A15B;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: 40px;
+      font-family: 'Cormorant Garamond', serif;
+      margin-top: 8px;
+    }
     .section-title em { color: #C6A15B; font-style: italic; }
     .search-container {
       max-width: 400px;
@@ -139,8 +212,15 @@
       overflow: hidden;
       cursor: pointer;
     }
-    .book-card:hover { transform: translateY(-8px); box-shadow: 0 25px 35px -12px rgba(0,0,0,0.1); border-color: #C6A15B; }
-    .book-card:active { transform: translateY(-2px); transition-duration: 0.1s; }
+    .book-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 35px -12px rgba(0,0,0,0.1);
+      border-color: #C6A15B;
+    }
+    .book-card:active {
+      transform: translateY(-2px);
+      transition-duration: 0.1s;
+    }
     .book-cover {
       height: 240px;
       background: linear-gradient(145deg, #F5F0E8, #EBE3D8);
@@ -163,23 +243,105 @@
       color: #C6A15B;
       text-transform: uppercase;
     }
-    .book-cover img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px 12px 0 0; }
+    .book-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px 12px 0 0;
+    }
     .book-info { padding: 28px 28px 24px; }
-    .book-series { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #C6A15B; margin-bottom: 12px; }
-    .book-title { font-size: 22px; font-family: 'Cormorant Garamond', serif; font-weight: 600; margin-bottom: 6px; }
-    .book-author { font-size: 12px; color: #9B8E78; margin-bottom: 16px; text-transform: uppercase; }
-    .book-desc { font-size: 14px; color: #6B5E4A; line-height: 1.5; margin-bottom: 20px; }
-    .book-formats { font-size: 12px; color: #C6A15B; margin-bottom: 12px; }
-    .book-price-row { display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid #E8E0D3; padding-top: 20px; margin-bottom: 20px; flex-wrap: wrap; gap: 8px; }
-    .price { font-size: 22px; font-weight: 600; color: #C6A15B; }
-    .download-note { font-size: 11px; color: #9B8E78; text-align: right; }
-    .book-actions { display: flex; gap: 16px; }
-    .btn-sample, .btn-buy { flex: 1; text-align: center; padding: 10px 0; border-radius: 40px; font-size: 13px; font-weight: 500; transition: all 0.2s; cursor: pointer; text-decoration: none; display: inline-block; }
-    .btn-sample { background: transparent; border: 1px solid #E8E0D3; color: #6B5E4A; }
-    .btn-sample:hover { border-color: #C6A15B; color: #C6A15B; background: rgba(198,161,91,0.05); }
-    .btn-buy { background: #2C2A29; color: #FCFAF5; border: none; }
-    .btn-buy:hover { background: #C6A15B; transform: translateY(-1px); }
-    .no-results { text-align: center; padding: 60px 20px; color: #9B8E78; font-style: italic; grid-column: 1 / -1; }
+    .book-series {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #C6A15B;
+      margin-bottom: 12px;
+    }
+    .book-title {
+      font-size: 22px;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .book-author {
+      font-size: 12px;
+      color: #9B8E78;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .book-desc {
+      font-size: 14px;
+      color: #6B5E4A;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .book-formats {
+      font-size: 12px;
+      color: #C6A15B;
+      margin-bottom: 12px;
+    }
+    .book-price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-top: 1px solid #E8E0D3;
+      padding-top: 20px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .price {
+      font-size: 22px;
+      font-weight: 600;
+      color: #C6A15B;
+    }
+    .download-note {
+      font-size: 11px;
+      color: #9B8E78;
+      text-align: right;
+    }
+    .book-actions {
+      display: flex;
+      gap: 16px;
+    }
+    .btn-sample, .btn-buy {
+      flex: 1;
+      text-align: center;
+      padding: 10px 0;
+      border-radius: 40px;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-sample {
+      background: transparent;
+      border: 1px solid #E8E0D3;
+      color: #6B5E4A;
+    }
+    .btn-sample:hover {
+      border-color: #C6A15B;
+      color: #C6A15B;
+      background: rgba(198,161,91,0.05);
+    }
+    .btn-buy {
+      background: #2C2A29;
+      color: #FCFAF5;
+      border: none;
+    }
+    .btn-buy:hover {
+      background: #C6A15B;
+      transform: translateY(-1px);
+    }
+    .no-results {
+      text-align: center;
+      padding: 60px 20px;
+      color: #9B8E78;
+      font-style: italic;
+      grid-column: 1 / -1;
+    }
     footer {
       border-top: 1px solid #E8E0D3;
       padding: 56px 0 32px;
@@ -203,11 +365,40 @@
       color: #9B8E78;
       letter-spacing: 0.04em;
     }
-    .footer-col h4 { font-size: 12px; letter-spacing: 0.1em; margin-bottom: 20px; color: #9B8E78; }
-    .footer-col a { display: block; color: #6B5E4A; text-decoration: none; font-size: 13px; margin-bottom: 10px; cursor: pointer; }
-    .footer-col a:hover { color: #C6A15B; }
-    .footer-bottom { text-align: center; font-size: 11px; color: #9B8E78; margin-top: 48px; padding-top: 24px; border-top: 1px solid #E8E0D3; }
-    .msme { margin-top: 12px; font-size: 11px; color: #9B8E78; }
+    .footer-col h4 {
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+      color: #9B8E78;
+    }
+    .footer-col a {
+      display: block;
+      color: #6B5E4A;
+      text-decoration: none;
+      font-size: 13px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .footer-col a:hover {
+      color: #C6A15B;
+    }
+    .footer-bottom {
+      text-align: center;
+      font-size: 11px;
+      color: #9B8E78;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #E8E0D3;
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .msme {
+      margin-top: 12px;
+      font-size: 11px;
+      color: #9B8E78;
+    }
     @media (max-width:768px){
       .content { padding: 16px; }
       nav { flex-direction: column; align-items: center; }
@@ -226,7 +417,10 @@
       transform: translateY(20px);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body>
@@ -325,14 +519,14 @@
             </div>
             <div class="book-actions">
               <a href="${b.sampleLink}" class="btn-sample" target="_blank">Read Sample</a>
-              <a href="${b.gumroadLink}" class="btn-buy" data-gumroad-overlay="true">Buy Now →</a>
+              <!-- UPDATED: Payhip link – opens new tab -->
+              <a href="${b.gumroadLink}" class="btn-buy" target="_blank">Buy Now →</a>
             </div>
           </div>
         </div>
       `).join('');
     if (!animate) {
       grid.innerHTML = newContent;
-      if (window.Gumroad) window.Gumroad.init();
       return;
     }
     if (isAnimating) return;
@@ -341,7 +535,6 @@
     setTimeout(() => {
       grid.innerHTML = newContent;
       grid.classList.remove('fade-out');
-      if (window.Gumroad) window.Gumroad.init();
       setTimeout(() => { isAnimating = false; }, 50);
     }, 200);
   }
