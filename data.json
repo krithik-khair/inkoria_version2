@@ -29,8 +29,8 @@
       "formats": "PDF • EPUB",
       "price": "$3.99",
       "sampleLink": "#",
-      "gumroadLink": "https://inkoriabooks.gumroad.com/l/kashmiri_shavism",
-      "coverImage": "images/kashmiri-shavism.png"
+      "gumroadLink": "https://payhip.com/b/XXXX1",
+      "coverImage": "images/kashmiri-shaivism.png"
     },
     {
       "series": "TRIKA SERIES · VOL II",
@@ -40,8 +40,8 @@
       "formats": "PDF • EPUB",
       "price": "$3.99",
       "sampleLink": "#",
-      "gumroadLink": "https://gumroad.com/l/spanda",
-      "coverImage": "images/1.png"
+      "gumroadLink": "https://payhip.com/b/XXXX2",
+      "coverImage": "images/spanda.png"
     },
     {
       "series": "TRIKA SERIES · VOL III",
@@ -51,8 +51,8 @@
       "formats": "PDF • EPUB",
       "price": "$3.99",
       "sampleLink": "#",
-      "gumroadLink": "https://gumroad.com/l/abhinavagupta",
-      "coverImage": "images/2.png"
+      "gumroadLink": "https://payhip.com/b/XXXX3",
+      "coverImage": "images/abhinavagupta.png"
     },
     {
       "series": "SOURCE TEXTS · VOL I",
@@ -62,8 +62,8 @@
       "formats": "PDF • EPUB",
       "price": "$4.99",
       "sampleLink": "#",
-      "gumroadLink": "https://gumroad.com/l/vijnana-bhairava",
-      "coverImage": "images/3.png"
+      "gumroadLink": "https://payhip.com/b/XXXX4",
+      "coverImage": "images/vijnana-bhairava.png"
     }
   ],
   "upcomingSection": {
@@ -96,10 +96,5 @@
     "subtitle": "Monthly reflections on Kashmir Shaivism, new releases and early access.",
     "buttonText": "Join Inkoria Letters →",
     "modalMessage": "Monthly reflections on Kashmir Shaivism, new releases and early access."
-  },
-  "footer": {
-    "tagline": "Khair Publications · MSME registered, India",
-    "msme": "MSME Registered · J&K, INDIA",
-    "copyright": "© 2026 Krithik Khair · Khair Publications · All rights reserved"
   }
 }
