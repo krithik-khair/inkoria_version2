@@ -29,7 +29,7 @@
       "formats": "PDF • EPUB",
       "price": "$3.99",
       "sampleLink": "#",
-      "gumroadLink": "https://payhip.com/buy?s=1&cart_links%5B%5D=POYaH&qty%5BPOYaH%5D=1",
+      "gumroadLink": "https://payhip.com/b/POYaH",
       "coverImage": "images/kashmiri-shavism.png"
     },
     {
@@ -40,7 +40,7 @@
       "formats": "PDF • EPUB",
       "price": "$3.99",
       "sampleLink": "#",
-      "gumroadLink": "https://payhip.com/b/XXXX2",
+      "gumroadLink": "https://payhip.com/b/mWVKG",
       "coverImage": "images/1.png"
     },
     {
@@ -51,7 +51,7 @@
       "formats": "PDF • EPUB",
       "price": "$3.99",
       "sampleLink": "#",
-      "gumroadLink": "https://payhip.com/b/XXXX3",
+      "gumroadLink": "https://payhip.com/b/06sNK",
       "coverImage": "images/2.png"
     },
     {
@@ -62,7 +62,7 @@
       "formats": "PDF • EPUB",
       "price": "$4.99",
       "sampleLink": "#",
-      "gumroadLink": "https://payhip.com/b/XXXX4",
+      "gumroadLink": "https://payhip.com/b/dpVRl",
       "coverImage": "images/3.png"
     }
   ],
