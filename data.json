@@ -9,9 +9,9 @@
     }
   },
   "stats": [
-    { "number": "9+", "label": "Countries Reached" },
-    { "number": "4+", "label": "Titles Published" },
-    { "number": "100+", "label": "Orders Worldwide" },
+    { "number": "12+", "label": "Countries Reached" },
+    { "number": "5+", "label": "Titles Published" },
+    { "number": "110+", "label": "Orders Worldwide" },
     { "number": "2025", "label": "Founded" }
   ],
   "booksSection": {
@@ -71,7 +71,7 @@
       "author": "Translated & annotated",
       "desc": "The 20-sutra map showing how absolute consciousness intentionally limits itself to play the game of being a human being.",
       "formats": "PDF • EPUB",
-      "price": "$3.99",
+      "price": "$4.99",
       "sampleLink": "#",
       "gumroadLink": "https://payhip.com/b/YH5QM",
       "coverImage": "images/4.png"
@@ -97,8 +97,8 @@
       "All our books are available as digital editions (PDF/EPUB) accessible worldwide. When you buy directly from us, you support a Kashmiri Pandit publisher and help preserve a philosophy that survived centuries of turmoil."
     ],
     "stats": [
-      { "number": "4+", "label": "Titles published" },
-      { "number": "9+", "label": "Countries reached" },
+      { "number": "5+", "label": "Titles published" },
+      { "number": "12+", "label": "Countries reached" },
       { "number": "∞", "label": "Tradition preserved" }
     ]
   },
