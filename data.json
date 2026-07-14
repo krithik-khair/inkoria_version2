@@ -9,8 +9,8 @@
     }
   },
   "stats": [
-    { "number": "12+", "label": "Countries Reached" },
-    { "number": "5+", "label": "Titles Published" },
+    { "number": "9+", "label": "Countries Reached" },
+    { "number": "4+", "label": "Titles Published" },
     { "number": "100+", "label": "Orders Worldwide" },
     { "number": "2025", "label": "Founded" }
   ],
@@ -96,8 +96,8 @@
       "All our books are available as digital editions (PDF/EPUB) accessible worldwide. When you buy directly from us, you support a Kashmiri Pandit publisher and help preserve a philosophy that survived centuries of turmoil."
     ],
     "stats": [
-      { "number": "5+", "label": "Titles published" },
-      { "number": "12+", "label": "Countries reached" },
+      { "number": "4+", "label": "Titles published" },
+      { "number": "9+", "label": "Countries reached" },
       { "number": "∞", "label": "Tradition preserved" }
     ]
   },
